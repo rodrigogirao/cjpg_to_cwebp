@@ -1,8 +1,8 @@
 # cjpg_to_cweb
 A command line converter for jpg comics to webp comics
 
-Required programs
+Required programs:
 
-unrar
-zip
-webp tools
+unrar  
+zip  
+webp tools  
