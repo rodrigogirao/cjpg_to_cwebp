@@ -1,7 +1,7 @@
 #!/bin/bash
 cd "$@";
-find $(pwd) -type d -links 2 > outtemp.txt
 IFS='';
+find $(pwd) -type d -links 2 > outtemp.txt
 while read line; do
 	cd $line;
 	echo "========== $line ==========";
@@ -21,7 +21,7 @@ while read line; do
 	done
 	
 	for f in *.cbr; do	
-		unzip ./"$f";
+		unrar e ./"$f";
 		for jf in *.jpg; do
 			cwebp ./"$jf" -o ./"${jf%.jpg}.webp";
 			rm ./"$jf";
